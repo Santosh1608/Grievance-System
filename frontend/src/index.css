@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roman-55, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+nav .active {
+  border-bottom: 2px solid white;
+  padding: 1rem 0.8rem;
+  font-weight: 700;
+  background-color: rgba(128, 127, 127, 0.055);
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}

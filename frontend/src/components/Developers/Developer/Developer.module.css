@@ -1,0 +1,12 @@
+.Developer {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.Developer * {
+  flex: 1;
+  padding: 1rem;
+}
+.DELETE:hover {
+  font-weight: bolder;
+}

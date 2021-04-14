@@ -1,0 +1,48 @@
+.OuterDevelopers {
+  position: relative;
+  z-index: 5;
+  color: white;
+  max-width: 70%;
+  padding: 1rem;
+  margin: auto;
+}
+table {
+  display: flex;
+  flex-direction: column;
+  min-width: 80%;
+}
+table tr {
+  display: flex;
+  flex: 1;
+  text-align: left;
+}
+table tr th {
+  flex: 1;
+  font-size: 1.5rem;
+}
+table tr td {
+  flex: 1;
+  padding-top: 2rem;
+}
+table th,
+table td {
+  border: 1px solid white;
+  border-bottom: none;
+  padding: 1rem;
+}
+table tr:last-child {
+  border-bottom: 1px solid white;
+}
+.ADDDEV {
+  text-align: center;
+  padding: 1rem;
+}
+.ADDDEV button {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+table tr td {
+  max-width: 80%;
+  overflow: scroll;
+}

@@ -1,0 +1,110 @@
+.Login {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.InnerLogin {
+  display: flex;
+  max-width: 80%;
+  min-height: 80vh;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-top-left-radius: 50px;
+  transition: all 0.5s;
+  border-bottom-right-radius: 50px;
+}
+.InnerLogin:hover {
+  transform: scale(1.01);
+}
+.InnerLogin .InnerLeft {
+  flex: 6;
+  text-align: center;
+  position: relative;
+}
+.InnerLogin .InnerLeft::before {
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  border-top-left-radius: 50px;
+}
+.InnerLogin .InnerRight {
+  flex: 4;
+  text-align: center;
+}
+.InnerLogin img {
+  width: 100%;
+  min-height: 80vh;
+  border-top-left-radius: 50px;
+  object-fit: cover;
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1);
+}
+.InnerRight {
+  padding: 2rem;
+  text-align: center;
+}
+.InnerRight h1 {
+  padding: 2rem 0;
+  font-weight: 500;
+}
+.InnerRight input,
+.InnerRight button {
+  display: inline-block;
+  width: 80%;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  padding: 16px;
+  outline: none;
+  border: 1px solid rgb(234, 238, 237);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 1rem;
+}
+
+.InnerRight input:focus {
+  border: rgb(160, 176, 189) 1px solid;
+}
+.InnerRight button {
+  background: rgb(0, 0, 10);
+  color: white;
+  font-weight: 100;
+  transition: transform 0.3s ease-in;
+  font-weight: 100;
+}
+.InnerRight button:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+.InnerLogin p,
+.InnerLogin button {
+  cursor: pointer;
+}
+.InnerLogin a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.InnerLogin a:hover {
+  font-weight: 700;
+}
+@media screen and (max-width: 700px) {
+  .InnerLeft {
+    display: none;
+    border-radius: none;
+  }
+  .InnerLogin {
+    display: flex;
+    max-width: 90%;
+    min-height: 80vh;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+  }
+}

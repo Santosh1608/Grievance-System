@@ -1,0 +1,42 @@
+.UpdateProfile {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 30%;
+  margin: auto;
+  margin-top: 3rem;
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+.UpdateProfile div {
+  margin-bottom: 1rem;
+}
+.UpdateProfile label {
+  margin-bottom: 6px;
+  font-weight: 700;
+  display: inline-block;
+}
+.UpdateProfile input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid rgb(185, 184, 184);
+}
+.UpdateProfile input[type="submit"] {
+  background: black;
+  color: white;
+  margin-top: 1rem;
+}
+.UpdateProfile input[type="submit"]:hover {
+  background: white;
+  color: black;
+  transform: scale(1.07);
+  box-shadow: 0 1px 1px 0 steelblue, 0 1px 2px 0 steelblue;
+}
+.UpdateProfile input:focus {
+  outline: steelblue;
+  box-shadow: 0 1px 1px 0 steelblue, 0 1px 2px 0 steelblue;
+}

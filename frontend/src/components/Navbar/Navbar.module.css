@@ -1,0 +1,40 @@
+nav ul {
+  display: flex;
+  padding: 1rem;
+  max-width: 70%;
+  margin: auto;
+}
+nav ul li,
+nav a {
+  text-decoration: none;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+  font-weight: 100;
+}
+nav ul div {
+  flex: 1;
+}
+
+.NavLeft {
+  display: flex;
+  align-items: center;
+}
+.NavRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.NavRight li {
+  margin: 0 1rem;
+}
+nav {
+  font-size: 1.4rem;
+  font-weight: 100;
+  position: relative;
+}
+nav img {
+  max-width: 20%;
+  margin-right: 2rem;
+  z-index: 10;
+}
