@@ -1,18 +1,19 @@
+import classes from "./Count.module.css";
 import React, { Component } from "react";
 
 class Count extends Component {
   render() {
-    let show = <div>New: {this.props.new}</div>;
+    let show = <p>New: {this.props.new}</p>;
     if (this.props.role == 1) {
       show = null;
     }
     return (
-      <>
-        <div>Total: {this.props.total}</div>
-        <div>Solved: {this.props.solved}</div>
-        <div>active: {this.props.active}</div>
+      <div className={classes.Count}>
+        <p>Total: {this.props.total}</p>
+        <p>Solved: {this.props.solved}</p>
+        <p>active: {this.props.active}</p>
         {show}
-      </>
+      </div>
     );
   }
 }

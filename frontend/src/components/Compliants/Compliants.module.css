@@ -1,0 +1,9 @@
+.cHead {
+  display: flex;
+}
+.cHead p {
+  flex: 1;
+  text-align: left;
+  font-weight: bold;
+  padding: 1rem;
+}

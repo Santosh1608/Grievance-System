@@ -1,0 +1,14 @@
+.cBody {
+  display: flex;
+}
+.cBody p {
+  flex: 1;
+  text-align: left;
+  font-weight: 500;
+  padding: 1rem;
+}
+.cBody select {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+}

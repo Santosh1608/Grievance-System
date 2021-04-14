@@ -1,9 +1,11 @@
+import classes from "./Compliant.module.css";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as compliantActions from "../../../actions/compliant";
 import * as modelActions from "../../../actions/model";
 import Model from "../../Model/Model";
 import ShowCompliant from "../../ShowCompliant/ShowCompliant";
+import Moment from "moment";
 class Compliant extends Component {
   onChangeHandler = (e) => {
     console.log("Changed", e.target.value, e.target.name);
@@ -53,8 +55,18 @@ class Compliant extends Component {
     return (
       <>
         {showModel}
-        <div>{this.props.compliant.name}</div>
-        {editCompliant}
+        <div className={classes.cBody}>
+          <p>{this.props.compliant._id}</p>
+          <p>{this.props.compliant.name}</p>
+          <p>{Moment(this.props.compliant.createdAt).format("YYYY-MM-DD")}</p>
+          <p>
+            {this.props.compliant.resolvedBy
+              ? this.props.compliant.resolvedBy.name
+              : "Not mapped"}
+          </p>
+          <p>{this.props.compliant.status}</p>
+          {editCompliant}
+        </div>
       </>
     );
   }

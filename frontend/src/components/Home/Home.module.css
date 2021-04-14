@@ -1,5 +1,34 @@
 .Home {
   z-index: 10;
-  position: relative;
   color: white;
+  position: absolute;
+  top: 10rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
+fieldset {
+  min-height: 100%;
+  position: relative;
+  max-width: 70%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+legend {
+  margin-bottom: 1rem;
+}
+fieldset button {
+  padding: 0.6rem 1rem;
+  background: white;
+  border: 1px solid rgb(223, 222, 222);
+  font-weight: bolder;
+}
+fieldset button:hover {
+  background: rgb(8, 8, 8);
+  color: rgb(255, 255, 255);
+  padding: 0.6rem 1rem;
 }

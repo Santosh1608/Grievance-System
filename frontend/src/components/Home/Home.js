@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../actions/compliant";
 import * as developerActions from "../../actions/developer";
-import { Link } from "react-router-dom";
 import Compliants from "../Compliants/Compliants";
 import Count from "../Count/Count";
 import Model from "../Model/Model";
@@ -52,30 +51,7 @@ class Home extends Component {
       );
     }
     return (
-      <div className={classes.Home}>
-        {showModel}
-        <div className={classes.Buttons}>
-          {showLink}
-          <button
-            disabled={this.props.activeChecked}
-            onClick={(e) =>
-              this.props.getAllCompliants(this.props.user.role, e.target.name)
-            }
-            name="active"
-          >
-            ACTIVE
-          </button>
-          <button
-            disabled={this.props.solvedChecked}
-            onClick={(e) =>
-              this.props.getAllCompliants(this.props.user.role, e.target.name)
-            }
-            name="solved"
-          >
-            SOLVED
-          </button>
-        </div>
-        <Compliants compliants={compliants} />
+      <>
         <Count
           role={this.props.user.role}
           total={this.props.totalCount}
@@ -83,7 +59,42 @@ class Home extends Component {
           new={this.props.newCount}
           solved={this.props.solvedCount}
         />
-      </div>
+        <div className={classes.Home}>
+          {showModel}
+          <div className={classes.Buttons}>
+            <fieldset>
+              <legend>
+                {showLink}
+                <button
+                  disabled={this.props.activeChecked}
+                  onClick={(e) =>
+                    this.props.getAllCompliants(
+                      this.props.user.role,
+                      e.target.name
+                    )
+                  }
+                  name="active"
+                >
+                  ACTIVE
+                </button>
+                <button
+                  disabled={this.props.solvedChecked}
+                  onClick={(e) =>
+                    this.props.getAllCompliants(
+                      this.props.user.role,
+                      e.target.name
+                    )
+                  }
+                  name="solved"
+                >
+                  SOLVED
+                </button>
+              </legend>
+              <Compliants compliants={compliants} />
+            </fieldset>
+          </div>
+        </div>
+      </>
     );
   }
 }

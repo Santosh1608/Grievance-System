@@ -57,7 +57,9 @@ router.get(
   isCustomer,
   async (req, res) => {
     try {
-      const compliants = await Compliant.find({ createdBy: req.profile._id });
+      const compliants = await Compliant.find({
+        createdBy: req.profile._id,
+      }).populate("resolvedBy", "name");
       res.send(compliants);
     } catch {
       res.status(400).send({
@@ -126,7 +128,9 @@ router.get(
   isDeveloper,
   async (req, res) => {
     try {
-      const compliants = await Compliant.find({ resolvedBy: req.profile._id });
+      const compliants = await Compliant.find({
+        resolvedBy: req.profile._id,
+      }).populate("resolvedBy", "name");
       res.send(compliants);
     } catch {
       res.status(400).send({
@@ -177,7 +181,7 @@ router.get(
   isAdmin,
   async (req, res) => {
     try {
-      const compliants = await Compliant.find();
+      const compliants = await Compliant.find().populate("resolvedBy", "name");
       res.send(compliants);
     } catch {
       res.status(400).send({
