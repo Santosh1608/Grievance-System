@@ -16,7 +16,11 @@ class Compliant extends Component {
     let editCompliant = null;
     if (this.props.user.role == 2 && this.props.checkNew) {
       editCompliant = (
-        <select name={this.props.compliant._id} onChange={this.onChangeHandler}>
+        <select
+          className={classes.Select}
+          name={this.props.compliant._id}
+          onChange={this.onChangeHandler}
+        >
           <option disabled selected hidden>
             Choose developer
           </option>
@@ -65,6 +69,7 @@ class Compliant extends Component {
               : "Not mapped"}
           </p>
           <p>{this.props.compliant.status}</p>
+          <p>{this.props.compliant.desc}</p>
           {editCompliant}
         </div>
       </>

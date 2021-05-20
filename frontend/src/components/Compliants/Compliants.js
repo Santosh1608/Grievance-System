@@ -13,6 +13,7 @@ class Compliants extends Component {
           <p>Created On</p>
           <p>Developer</p>
           <p>Status</p>
+          <p>Desc</p>
           <p
             style={{
               display: this.props.user.role == 0 ? "none" : "block",

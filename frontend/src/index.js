@@ -12,6 +12,8 @@ import modelReducer from "./reducers/model";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import axios from "axios";
+// https://javascript.plainenglish.io/simple-pagination-with-node-js-mongoose-and-express-4942af479ab2 -> Pagination using node js
+// https://react-component-depot.netlify.app/infinite-scrolling -> pagination using react js
 //setting axios interceptors
 //setting axios defaults
 axios.defaults.baseURL = "http://localhost:8000";

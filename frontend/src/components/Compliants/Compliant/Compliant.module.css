@@ -12,3 +12,13 @@
   margin-bottom: 1rem;
   outline: none;
 }
+.Select {
+  font-size: 1rem;
+  padding: 1rem;
+}
+.Select option {
+  font-size: 1.2rem;
+}
+option {
+  background: rgb(240, 237, 237);
+}
